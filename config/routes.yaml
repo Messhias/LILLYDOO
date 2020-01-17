@@ -1,3 +1,23 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+contacts:
+  path: /contacts
+  controller: App\Controller\ContactsController:index
+
+create:
+  path: /create-contact
+  controller: App\Controller\ContactsController:createContact
+
+view:
+  path: /view-contact/{id}
+  controller: App\Controller\ContactsController:viewContact
+
+delete:
+  path: /delete-contact/{id}
+  controller: App\Controller\ContactsController:deleteContact
+
+update:
+  path: /update-contact/{id}
+  controller: App\Controller\ContactsController:updateContact

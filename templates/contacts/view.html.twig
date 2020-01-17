@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ContactsController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <ul>
+        <li>First name
+            <code>
+                {{ contact.firstname }}
+            </code>
+        </li>
+        <li>Last name
+            <code>
+                {{ contact.lastname }}
+            </code>
+        </li>
+        <li>Email
+            <code>
+                {{ contact.email }}
+            </code>
+        </li>
+        <li>Street
+            <code>
+                {{ contact.street }}
+            </code>
+        </li>
+        <li>Number
+            <code>
+                {{ contact.number }}
+            </code>
+        </li>
+        <li>Zip
+            <code>
+                {{ contact.zip }}
+            </code>
+        </li>
+        <li>City
+            <code>
+                {{ contact.city }}
+            </code>
+        </li>
+        <li>Country
+            <code>
+                {{ contact.country }}
+            </code>
+        </li>
+        <li>Phone number
+            <code>
+                {{ contact.phonenumber }}
+            </code>
+        </li>
+        <li>Birth day
+            <code>
+                {{ contact.birthday|date("m/d/Y") }}
+            </code>
+        </li>
+    </ul>
+
+    <h4>
+        <a href="{{ path('contacts') }}">
+            Back to contact list.
+        </a>
+    </h4>
+</div>
+{% endblock %}
